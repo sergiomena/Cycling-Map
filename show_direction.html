@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Commenti</title>
+  <script src="/JavaScript/script_getStorage.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://js.arcgis.com/3.16/dijit/themes/nihilo/nihilo.css">
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+  <link rel="icon" href="favicon-bicycle.ico" type="image/gif" sizes="16x16">
+  <script src="/JavaScript/map_direction.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDj3kN9F26d0UWQBUTLgENA574Le_tBCuQ&libraries=places&callback=initMap" async defer></script>
+<style>
+#show_map {
+  position:absolute;;
+  right:18%;
+  top: 5%;
+}
+</style>
+
+</head>
+<body class="nihilo">
+  <div class="container" id="pos">
+    <br>
+    <ul class="nav nav-pills" role="tablist">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="direction.html">Percorsi</a></li>
+      <li class="active"><a href="comment.html">Commenti</a></li>
+      <li><a href="about.html">About Me</a></li>
+    </ul>
+    <br>
+  </div>
+  <br>
+
+
+  <!--  VISUALIZZAZIONE MAPPA -->
+  <div id="floating-panel"></div>
+  <div id="map"></div>
+  <input type="submit" class="btn btn-primary"  value="Mostra percorso" id="show_map">
+
+  <!--  VISUALIZZAZIONE DEI COMMENTI -->
+  <div class="container" id="posForum">
+    <div class="panel panel-primary">
+      <div class="panel-heading"><h5><b>Visualizzazione commenti percorso</b></h5></div>
+      <div class="panel-body">
+        <p id="show"><b>Chi &nbsp &nbsp  &nbsp &nbsp &nbsp Quando &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbspDa &nbsp &nbsp  &nbsp  &nbsp  &nbsp  &nbsp A &nbsp   &nbsp  &nbsp  &nbsp &nbsp Commento &nbsp &nbsp </b></p>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

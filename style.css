@@ -1,0 +1,118 @@
+
+
+#control
+{
+	position: absolute;
+	width: 225px;
+	height: 80px;
+	top: 40%;
+	left: 50%;
+	margin: -40px 0 0 -112px;
+	color: #000000;
+}
+
+#controlButton
+{
+  position: absolute;
+  width: 225px;
+  height: 80px;
+  top: 75%;
+  left: 50%;
+  margin: -40px 0 0 -112px;
+  color: #000000;
+}
+
+
+html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        top:10%;
+        height: 80%;
+        width:80%;
+        left:2%;
+      }
+
+      #pos {
+        position:absolute;
+        left:1%;
+      }
+
+			#posButton {
+				position:absolute;
+				right:5%;
+			}
+
+      #posForm {
+        position:absolute;
+        left:1%;
+        top:15%;
+      }
+
+      #posForum {
+        position: absolute;
+        left: 1%;
+        top:100%;
+      }
+
+      #posAck {
+        position: absolute;
+        left:2%;
+        top:13%;
+      }
+
+      .controls {
+        margin-top: 10px;
+        border: 1px solid transparent;
+        border-radius: 2px 0 0 2px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        height: 32px;
+        outline: none;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      }
+
+      #origin-input,
+      #destination-input {
+        background-color: #fff;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 300;
+        margin-left: 12px;
+        padding: 0 11px 0 13px;
+        text-overflow: ellipsis;
+        width: 200px;
+      }
+
+      #origin-input:focus,
+      #destination-input:focus {
+        border-color: #4d90fe;
+      }
+
+      #mode-selector {
+        color: #fff;
+        background-color: #4d90fe;
+        margin-left: 12px;
+        padding: 5px 11px 0px 11px;
+      }
+
+      #mode-selector label {
+        font-family: Roboto;
+        font-size: 13px;
+        font-weight: 300;
+      }
+
+      #localization {
+      	color: #fff;
+        background-color: #4d90fe;
+        margin-left: 20px;
+        padding: 9px 15px 4px 11px;
+        margin-top:10px;
+        font-size:13px;
+        font-family: Roboto;
+        border: 1px solid transparent;
+        border-radius: 2px 0 0 2px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      }

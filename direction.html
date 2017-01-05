@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Percorsi</title>
+
+  <script src="/JavaScript/script_localization.js"></script>
+  <script src="/JavaScript/autocomplete_direction.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDj3kN9F26d0UWQBUTLgENA574Le_tBCuQ&libraries=places&callback=initMap" async defer></script>
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+  <link rel="icon" href="favicon-bicycle.ico" type="image/gif" sizes="16x16">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
+
+</head>
+
+
+<body>
+  <div class="container" id="pos">
+    <br>
+    <ul class="nav nav-pills" role="tablist">
+      <li><a href="index.html">Home</a></li>
+      <li class="active"><a href="direction.html">Percorsi</a></li>
+      <li><a href="comment.html">Commenti</a></li>
+      <li><a href="about.html">About me</a></li>
+      <button  id="posButton" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Commenta la tua esperienza cliccando qui!</button>
+    </ul>
+  </div>
+  <br>
+
+
+  <!--  INSERIMENTO DELLA MAPPA -->
+  <input id="origin-input" class="controls" type="text" placeholder="Enter an origin location">
+
+  <input id="destination-input" class="controls" type="text" placeholder="Enter a destination location">
+
+  <button onclick="getLocation()" id="localization">Find Your Position</button>
+
+  <div id="mode-selector" class="controls">
+    <input type="radio" name="type" id="changemode-walking" checked="checked">
+    <label for="changemode-walking">Walking</label>
+
+    <input type="radio" name="type" id="changemode-transit">
+    <label for="changemode-transit">Cycling</label>
+  </div>
+
+
+  <!--  BOTTONE PER INSEIRIRE COMMENTO -->
+  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="container-fluid" id = "form">
+          <!--  INIZIO DELLA FORM -->
+          <form action="/insert" method="post"><br>
+            <div class="form-group col-sm-6">
+              <label for="usr">Come ti chiami:</label>
+              <input type="text" class="form-control" name="name">
+            </div>
+            <div class="form-group col-sm-6">
+              <label for="usr">Quando sei partito:</label>
+              <input type="date" class="form-control" name="when">
+            </div>
+            <div class="form-group col-sm-6">
+              <label for="usr">Dove sei partito:</label>
+              <input type="text" class="form-control" name="start">
+            </div>
+            <div class="form-group col-sm-6">
+              <label for="usr">Dove sei arrivato:</label>
+              <input type="text" class="form-control" name="end">
+            </div>
+            <div class="form-group col-sm-12">
+              <label for="comment">Cosa hai da dire sull'intero percorso:</label>
+              <textarea class="form-control" rows="5" name="long_comment"></textarea>
+            </div>
+            <div class="form-group col-sm-4">
+            <input type="hidden" name="latitudine" id="latitudine" value="">
+            <input type="hidden" name="longitudine" id="longitudine"value="">
+            <input type="button" class="btn btn-info" onclick="getLocation();" value="Get Location"/><br><br>
+            <input type="submit" class="btn btn-info" value="Invia" id="send">
+            </div>
+          </form><br>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="map"></div>
+
+</body>
+</html>

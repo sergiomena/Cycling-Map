@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Commenti</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://js.arcgis.com/3.16/dijit/themes/nihilo/nihilo.css">
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+  <link rel="icon" href="favicon-bicycle.ico" type="image/gif" sizes="16x16">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="/JavaScript/google.js"></script>
+  <script src="/JavaScript/script_comment.js"></script>
+  
+</head>
+<body class="nihilo">
+  <div class="container" id="pos">
+    <br>
+    <ul class="nav nav-pills" role="tablist">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="direction.html">Percorsi</a></li>
+      <li class="active"><a href="comment.html">Commenti</a></li>
+      <li><a href="about.html">About Me</a></li>
+    </ul>
+    <br>
+  </div>
+  <br>
+
+  <!--  FORM PER L'INSERIMENTO DEI CAMPI DI RICERCA -->
+  <div class="panel panel-primary" id="posAck">
+    <div class="panel-heading"><h5><b>Questa &egrave la sezione per vedere i commenti su un percorso</b></h5></div>
+    <div class="panel-body"> <b>Inserisci i seguenti dati per visualizzare i commenti del percorso scelto:</b>
+      <form action="/comment" method="post">
+        <div class="form-group">
+          <label for="usr">Punto di partenza:</label>
+          <input type="text" class="form-control" name="partenza" id="partenza">
+        </div>
+        <div class="form-group">
+          <label for="usr">Punto di arrivo:</label>
+          <input type="text" class="form-control" name="arrivo" id="arrivo">
+        </div>
+        <input type="submit" class="btn btn-info" value="Invia" id="send" onclick="GetInformation()" >
+      </form>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
